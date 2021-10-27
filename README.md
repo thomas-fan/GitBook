@@ -19,5 +19,5 @@
 + 17至今主要负责 java/php/go 等 web 后端方向开发
 + 虽然马上 30 了,但我觉得编程年龄不是问题,能持续学习才是王道
 + 计算机在职研论文奋斗中...预计 22-23 年答辩(选题机器学习方向)
-+ Keep learing, keep coding~
++ Keep learning, keep coding~
 

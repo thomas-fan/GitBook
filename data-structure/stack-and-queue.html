@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>时间复杂度 · GitBook</title>
+        <title>栈和队列 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="array-linked-list-skip-list.html" />
     
-    
-    <link rel="prev" href="./" />
+    <link rel="prev" href="array-linked-list-skip-list.html" />
     
 
     </head>
@@ -116,7 +114,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.1" data-path="time-complexity.html">
+        <li class="chapter " data-level="1.2.1" data-path="time-complexity.html">
             
                 <a href="time-complexity.html">
             
@@ -142,7 +140,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="stack-and-queue.html">
+        <li class="chapter active" data-level="1.2.3" data-path="stack-and-queue.html">
             
                 <a href="stack-and-queue.html">
             
@@ -222,7 +220,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >时间复杂度</a>
+        <a href=".." >栈和队列</a>
     </h1>
 </div>
 
@@ -237,35 +235,27 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;big-o-notation">&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;(Big O notation)</h1>
-<h2 id="&#x5E38;&#x89C1;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;">&#x5E38;&#x89C1;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</h2>
+                                <h1 id="&#x6808;&#x548C;&#x961F;&#x5217;">&#x6808;&#x548C;&#x961F;&#x5217;</h1>
+<h2 id="&#x6808;&#x961F;&#x5217;-&#x53CC;&#x7AEF;&#x961F;&#x5217;">&#x6808;,&#x961F;&#x5217;, &#x53CC;&#x7AEF;&#x961F;&#x5217;</h2>
+<h3 id="&#x7279;&#x70B9;">&#x7279;&#x70B9;</h3>
 <ul>
-<li>O(1): Constant Complexity &#x5E38;&#x6570;&#x590D;&#x6742;&#x5EA6;</li>
-<li>O(log n): Logarithmic Complexity &#x5BF9;&#x6570;&#x590D;&#x6742;&#x5EA6;</li>
-<li>O(n): Linear Complexity &#x7EBF;&#x6027;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</li>
-<li>O(n^2) N square Complexity &#x5E73;&#x65B9;</li>
-<li>O(n^3) N square Complexity &#x7ACB;&#x65B9;</li>
-<li>O(2^n) Exponential Growth &#x6307;&#x6570;</li>
-<li>O(n!) Factorial &#x9636;&#x4E58;</li>
-<li>&#x5176;&#x4E2D;&#x4E0D;&#x8003;&#x8651;&#x7CFB;&#x6570;,&#x53EA;&#x8003;&#x8651;&#x6700;&#x9AD8;&#x590D;&#x6742;&#x5EA6;&#x7684;&#x8FD0;&#x7B97;</li>
-</ul>
-<h2 id="&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x66F2;&#x7EBF;">&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x66F2;&#x7EBF;</h2>
-<p><img src="http://keepcoding.oss-cn-beijing.aliyuncs.com/uPic/image-20211027114439956.png" alt="image-20211027114439956"></p>
-<h2 id="&#x9012;&#x5F52;&#x4E3B;&#x5B9A;&#x7406;-master-theorem">&#x9012;&#x5F52;&#x4E3B;&#x5B9A;&#x7406; (Master Theorem)</h2>
-<p><img src="http://keepcoding.oss-cn-beijing.aliyuncs.com/uPic/image-20211027141710501.png" alt="image-20211027141710501"></p>
-<ul>
-<li>&#x4E8C;&#x5206;&#x67E5;&#x627E;, O(logn)</li>
-<li>&#x4E8C;&#x53C9;&#x6811;&#x904D;&#x5386;, O(n) (tips: &#x56E0;&#x4E3A;&#x4E8C;&#x53C9;&#x6811;&#x6BCF;&#x4E2A;&#x6570;&#x636E;&#x53EA;&#x8BBF;&#x95EE;&#x4E00;&#x6B21;,&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A; O(n))</li>
-<li>&#x6392;&#x597D;&#x5E8F;&#x7684;&#x77E9;&#x9635;&#x8FDB;&#x884C;&#x4E8C;&#x5206;&#x67E5;&#x627E;, O(n)</li>
-<li>&#x5F52;&#x5E76;&#x6392;&#x5E8F;, O(nlogn)</li>
-</ul>
-<h2 id="references">References</h2>
-<ul>
-<li><p><a href="http://www.zhihu.com/question/21387264" target="_blank">&#x5982;&#x4F55;&#x7406;&#x89E3;&#x7B97;&#x6CD5;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x7684;&#x8868;&#x793A;&#x6CD5;</a></p>
+<li><p>&#x6808;&#x5148;&#x5165;&#x540E;&#x51FA;</p>
 </li>
-<li><p><a href="http://en.wikipedia.org/wiki/Master_theorem_(analysis_of_algorithms" target="_blank">Master theorem</a>)</p>
+<li><p>&#x961F;&#x5217;&#x5148;&#x5165;&#x5148;&#x51FA;</p>
 </li>
-<li><a href="http://zh.wikipedia.org/wiki/&#x4E3B;&#x5B9A;&#x7406;" target="_blank">&#x4E3B;&#x5B9A;&#x7406;</a></li>
+<li><p>&#x6DFB;&#x52A0;,&#x5220;&#x9664;&#x4E3A; O(1)</p>
+</li>
+<li><p>&#x67E5;&#x8BE2;&#x4E3A; O(n)</p>
+<p><img src="http://keepcoding.oss-cn-beijing.aliyuncs.com/uPic/image-20211101162337979.png" alt="image-20211101162337979" style="zoom:50%;"></p>
+</li>
+</ul>
+<p><img src="http://keepcoding.oss-cn-beijing.aliyuncs.com/uPic/image-20211101162352248.png" alt="image-20211101162352248" style="zoom:50%;"></p>
+<p><img src="http://keepcoding.oss-cn-beijing.aliyuncs.com/uPic/image-20211101180909020.png" alt="image-20211101180909020" style="zoom:50%;"></p>
+<h2 id="&#x4F18;&#x5148;&#x961F;&#x5217;">&#x4F18;&#x5148;&#x961F;&#x5217;</h2>
+<ul>
+<li>&#x63D2;&#x5165; O(1)</li>
+<li>&#x53D6;&#x51FA;O(logN)</li>
+<li>&#x5E95;&#x5C42;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x679C;&#x8F83;&#x4E3A;&#x591A;&#x6837;&#x548C;&#x590D;&#x6742;: heap, bst, rb-tree, treap</li>
 </ul>
 
                                 
@@ -294,14 +284,10 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 数据结构">
+                <a href="array-linked-list-skip-list.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 数组,链表,跳表">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="array-linked-list-skip-list.html" class="navigation navigation-next " aria-label="Next page: 数组,链表,跳表">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -310,7 +296,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"时间复杂度","level":"1.2.1","depth":2,"next":{"title":"数组,链表,跳表","level":"1.2.2","depth":2,"path":"data-structure/array-linked-list-skip-list.md","ref":"./data-structure/array-linked-list-skip-list.md","articles":[]},"previous":{"title":"数据结构","level":"1.2","depth":1,"path":"data-structure/README.md","ref":"./data-structure/README.md","articles":[{"title":"时间复杂度","level":"1.2.1","depth":2,"path":"data-structure/time-complexity.md","ref":"./data-structure/time-complexity.md","articles":[]},{"title":"数组,链表,跳表","level":"1.2.2","depth":2,"path":"data-structure/array-linked-list-skip-list.md","ref":"./data-structure/array-linked-list-skip-list.md","articles":[]},{"title":"栈和队列","level":"1.2.3","depth":2,"path":"data-structure/stack-and-queue.md","ref":"./data-structure/stack-and-queue.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"data-structure/time-complexity.md","mtime":"2021-10-27T06:27:01.479Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-08T10:47:11.603Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"栈和队列","level":"1.2.3","depth":2,"next":{"title":"后端","level":"1.3","depth":1,"ref":"","articles":[{"title":"Centos7.8 kubenetes 环境搭建","level":"1.3.1","depth":2,"path":"backend/centos7.8-kubenetes-deploy.md","ref":"./backend/centos7.8-kubenetes-deploy.md","articles":[]}]},"previous":{"title":"数组,链表,跳表","level":"1.2.2","depth":2,"path":"data-structure/array-linked-list-skip-list.md","ref":"./data-structure/array-linked-list-skip-list.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"data-structure/stack-and-queue.md","mtime":"2021-11-01T10:24:13.135Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-08T10:47:11.603Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
